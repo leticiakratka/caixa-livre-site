@@ -626,7 +626,7 @@
       position: relative;
       display: flex;
       flex-direction: column;
-      gap: 56px;
+      gap: 28px;
       padding: 8px 0 18px;
     }
 
@@ -773,7 +773,7 @@
     .jornada-card {
       position: relative;
       width: 100%;
-      padding: 36px;
+      padding: 24px 28px;
       border-radius: 34px;
       background: rgba(255, 255, 255, 0.88);
       border: 1px solid rgba(92, 95, 48, 0.1);
@@ -838,12 +838,19 @@
       border-color: rgba(221, 143, 93, 0.9);
     }
 
+    .jornada-card-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
     .jornada-etiqueta {
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      margin-bottom: 18px;
-      padding: 10px 16px;
+      margin-bottom: 0;
+      padding: 8px 14px;
       border-radius: var(--radius-pill);
       background: var(--dark);
       color: var(--text-light);
@@ -861,17 +868,18 @@
     }
 
     .jornada-icon {
-      width: 56px;
-      height: 56px;
-      border-radius: 18px;
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
       display: flex;
       align-items: center;
       justify-content: center;
       background: linear-gradient(135deg, rgba(92, 95, 48, 0.12), rgba(221, 143, 93, 0.14));
       color: var(--olive);
-      margin-bottom: 20px;
+      margin-bottom: 0;
       position: relative;
       z-index: 1;
+      flex-shrink: 0;
       transition:
         transform 380ms cubic-bezier(0.2, 1, 0.2, 1),
         background 380ms ease,
@@ -879,8 +887,8 @@
     }
 
     .jornada-icon svg {
-      width: 28px;
-      height: 28px;
+      width: 22px;
+      height: 22px;
       stroke: currentColor;
     }
 
@@ -4599,12 +4607,14 @@
 
             <div class="jornada-step-card">
               <div class="jornada-card" data-journey-card tabindex="0" role="button" aria-pressed="false">
-                <p class="jornada-etiqueta jornada-etiqueta-luz">Parada 01</p>
-                <div class="jornada-icon" aria-hidden="true">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M8 6.75h8M8 10.75h8M8 14.75h5"/>
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M7.25 3.75h9.5A2.25 2.25 0 0 1 19 6v12A2.25 2.25 0 0 1 16.75 20.25h-9.5A2.25 2.25 0 0 1 5 18V6A2.25 2.25 0 0 1 7.25 3.75Z"/>
-                  </svg>
+                <div class="jornada-card-header">
+                  <div class="jornada-icon" aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M8 6.75h8M8 10.75h8M8 14.75h5"/>
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M7.25 3.75h9.5A2.25 2.25 0 0 1 19 6v12A2.25 2.25 0 0 1 16.75 20.25h-9.5A2.25 2.25 0 0 1 5 18V6A2.25 2.25 0 0 1 7.25 3.75Z"/>
+                    </svg>
+                  </div>
+                  <p class="jornada-etiqueta jornada-etiqueta-luz">Parada 01</p>
                 </div>
                 <h3 class="jornada-titulo">Você organiza seus números</h3>
                 <p class="jornada-texto">Junta extratos, cartões e entradas num só lugar, sem depender de fórmula difícil.</p>
@@ -4617,12 +4627,14 @@
           <article class="jornada-step jornada-step-left scroll-reveal" style="--reveal-delay: 280ms;">
             <div class="jornada-step-card">
               <div class="jornada-card" data-journey-card tabindex="0" role="button" aria-pressed="false">
-                <p class="jornada-etiqueta jornada-etiqueta-luz">Parada 02</p>
-                <div class="jornada-icon" aria-hidden="true">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="m15.75 15.75 3.5 3.5M10.75 17.25a6.5 6.5 0 1 0 0-13 6.5 6.5 0 0 0 0 13Z"/>
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.5 11.25h4.5M10.75 9v4.5"/>
-                  </svg>
+                <div class="jornada-card-header">
+                  <div class="jornada-icon" aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="m15.75 15.75 3.5 3.5M10.75 17.25a6.5 6.5 0 1 0 0-13 6.5 6.5 0 0 0 0 13Z"/>
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M8.5 11.25h4.5M10.75 9v4.5"/>
+                    </svg>
+                  </div>
+                  <p class="jornada-etiqueta jornada-etiqueta-luz">Parada 02</p>
                 </div>
                 <h3 class="jornada-titulo">Você entende o que está acontecendo</h3>
                 <p class="jornada-texto">A Clara analisa seus dados e aponta onde o dinheiro está escapando sem você perceber.</p>
@@ -4655,12 +4667,14 @@
 
             <div class="jornada-step-card">
               <div class="jornada-card" data-journey-card tabindex="0" role="button" aria-pressed="false">
-                <p class="jornada-etiqueta jornada-etiqueta-luz">Parada 03</p>
-                <div class="jornada-icon" aria-hidden="true">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 19.25h16M6.75 16.75V11.5M12 16.75V8.75M17.25 16.75V5.25"/>
-                    <path stroke-linecap="round" stroke-linejoin="round" d="m5.5 8.75 3-3 3 2 6-4"/>
-                  </svg>
+                <div class="jornada-card-header">
+                  <div class="jornada-icon" aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M4 19.25h16M6.75 16.75V11.5M12 16.75V8.75M17.25 16.75V5.25"/>
+                      <path stroke-linecap="round" stroke-linejoin="round" d="m5.5 8.75 3-3 3 2 6-4"/>
+                    </svg>
+                  </div>
+                  <p class="jornada-etiqueta jornada-etiqueta-luz">Parada 03</p>
                 </div>
                 <h3 class="jornada-titulo">Você cria um plano que faz sentido</h3>
                 <p class="jornada-texto">Com base na sua renda, rotina e prioridades, não em regra genérica que não cabe na vida real.</p>
@@ -4673,12 +4687,14 @@
           <article class="jornada-step jornada-step-left scroll-reveal" style="--reveal-delay: 480ms;">
             <div class="jornada-step-card">
               <div class="jornada-card" data-journey-card tabindex="0" role="button" aria-pressed="false">
-                <p class="jornada-etiqueta jornada-etiqueta-luz">Parada 04</p>
-                <div class="jornada-icon" aria-hidden="true">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 7.25h12M8.5 12h7M10.25 16.75h3.5"/>
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 3.75h9A2.25 2.25 0 0 1 18.75 6v12A2.25 2.25 0 0 1 16.5 20.25h-9A2.25 2.25 0 0 1 5.25 18V6A2.25 2.25 0 0 1 7.5 3.75Z"/>
-                  </svg>
+                <div class="jornada-card-header">
+                  <div class="jornada-icon" aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M6 7.25h12M8.5 12h7M10.25 16.75h3.5"/>
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 3.75h9A2.25 2.25 0 0 1 18.75 6v12A2.25 2.25 0 0 1 16.5 20.25h-9A2.25 2.25 0 0 1 5.25 18V6A2.25 2.25 0 0 1 7.5 3.75Z"/>
+                    </svg>
+                  </div>
+                  <p class="jornada-etiqueta jornada-etiqueta-luz">Parada 04</p>
                 </div>
                 <h3 class="jornada-titulo">Você ajusta ao longo do mês</h3>
                 <p class="jornada-texto">Em 30 minutos por semana, revisa a rota, corrige excessos e sabe quanto ainda pode gastar.</p>
