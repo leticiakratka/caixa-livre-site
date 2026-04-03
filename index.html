@@ -6096,5 +6096,22 @@
     </div>
   </footer>
 
+  <script>
+    // Repassa UTMs para links de checkout (Eduzz)
+    (function(){
+      var params = new URLSearchParams(window.location.search);
+      var utms = ['utm_source','utm_medium','utm_campaign','utm_term','utm_content','src'];
+      var query = '';
+      utms.forEach(function(key){
+        var val = params.get(key);
+        if(val) query += (query ? '&' : '?') + key + '=' + encodeURIComponent(val);
+      });
+      if(!query) return;
+      document.querySelectorAll('a[href*="chk.eduzz.com"]').forEach(function(a){
+        a.href = a.href + (a.href.indexOf('?') > -1 ? '&' : '?') + query.substring(1);
+      });
+    })();
+  </script>
+
 </body>
 </html>
