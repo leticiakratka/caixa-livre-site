@@ -3126,10 +3126,10 @@
       z-index: 1;
     }
 
-    /* Laptop com planilha — centro, o maior */
+    /* Laptop com planilha — centro, o principal */
     .oferta-mock-laptop {
       position: relative;
-      width: 58%;
+      width: 52%;
       margin: 0 auto;
       z-index: 3;
       animation: ofertaMockupFloat 6s ease-in-out infinite;
@@ -3141,26 +3141,11 @@
       filter: drop-shadow(0 24px 48px rgba(0, 0, 0, 0.22));
     }
 
-    /* Mac aba saídas — atrás do laptop, esquerda */
-    .oferta-mock-saidas {
-      position: absolute;
-      left: 4%;
-      top: 10%;
-      width: 30%;
-      z-index: 1;
-      animation: ofertaMockupFloat 5.8s ease-in-out infinite;
-      animation-delay: -4s;
-    }
-
-    .oferta-mock-saidas .pilar-window {
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.18);
-    }
-
-    /* Mac análise do mês — atrás do laptop, direita */
+    /* Mac análise do mês — atrás esquerda */
     .oferta-mock-analise {
       position: absolute;
-      right: 4%;
-      top: 6%;
+      left: 0%;
+      top: -2%;
       width: 30%;
       z-index: 1;
       animation: ofertaMockupFloat 5.5s ease-in-out infinite;
@@ -3168,31 +3153,47 @@
     }
 
     .oferta-mock-analise .pilar-window {
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.18);
+      box-shadow: 0 18px 46px rgba(0, 0, 0, 0.16);
     }
 
-    /* Mac plataforma — esquerdo inferior, sobrepõe laptop */
+    /* Mac aba saídas — atrás direita */
+    .oferta-mock-saidas {
+      position: absolute;
+      right: 0%;
+      top: -4%;
+      width: 30%;
+      z-index: 1;
+      animation: ofertaMockupFloat 5.8s ease-in-out infinite;
+      animation-delay: -4s;
+    }
+
+    .oferta-mock-saidas .pilar-window {
+      box-shadow: 0 18px 46px rgba(0, 0, 0, 0.16);
+    }
+
+    /* Mac plataforma — centro atrás, entre os dois, atrás do laptop */
     .oferta-mock-plataforma {
       position: absolute;
-      left: 2%;
-      bottom: -10%;
+      left: 50%;
+      transform: translateX(-50%);
+      top: -8%;
       width: 32%;
-      z-index: 4;
+      z-index: 2;
       animation: ofertaMockupFloat 5.2s ease-in-out infinite;
       animation-delay: -2.5s;
     }
 
     .oferta-mock-plataforma .pilar-window {
-      box-shadow: 0 22px 54px rgba(0, 0, 0, 0.22);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.18);
     }
 
-    /* Mac aula com play — sobrepõe plataforma, mais à direita */
+    /* Mac aula com play — frente esquerda, sobrepõe laptop */
     .oferta-mock-aula {
       position: absolute;
-      left: 30%;
-      bottom: -14%;
-      width: 30%;
-      z-index: 5;
+      left: 2%;
+      bottom: -8%;
+      width: 34%;
+      z-index: 4;
       animation: ofertaMockupFloat 5.6s ease-in-out infinite;
       animation-delay: -3.5s;
     }
@@ -3201,13 +3202,13 @@
       box-shadow: 0 22px 54px rgba(0, 0, 0, 0.22);
     }
 
-    /* iPhone vídeo Clara — direito inferior, sobrepõe laptop */
+    /* iPhone vídeo Clara — frente direita */
     .oferta-mock-phone {
       position: absolute;
-      right: 8%;
-      bottom: -16%;
-      width: 15%;
-      z-index: 6;
+      right: 6%;
+      bottom: -10%;
+      width: 14%;
+      z-index: 5;
       animation: ofertaMockupFloat 5s ease-in-out infinite;
       animation-delay: -3s;
     }
@@ -4221,12 +4222,12 @@
         min-height: 200px;
         margin-bottom: 72px;
       }
-      .oferta-mock-laptop { width: 64%; }
-      .oferta-mock-saidas { width: 34%; left: 2%; top: 8%; }
-      .oferta-mock-analise { width: 34%; right: 2%; top: 4%; }
-      .oferta-mock-plataforma { width: 36%; left: 0%; bottom: -8%; }
-      .oferta-mock-aula { width: 34%; left: 28%; bottom: -10%; }
-      .oferta-mock-phone { width: 18%; right: 4%; bottom: -12%; }
+      .oferta-mock-laptop { width: 58%; }
+      .oferta-mock-analise { width: 34%; left: -2%; top: 0%; }
+      .oferta-mock-saidas { width: 34%; right: -2%; top: -2%; }
+      .oferta-mock-plataforma { width: 36%; top: -6%; }
+      .oferta-mock-aula { width: 38%; left: 0%; bottom: -6%; }
+      .oferta-mock-phone { width: 16%; right: 4%; bottom: -8%; }
       .oferta-mock-phone video { border-radius: 10px; }
       .pilar-play-btn { width: 40px; height: 40px; box-shadow: 0 8px 20px rgba(0,0,0,0.14), 0 0 0 4px rgba(255,255,255,0.15); }
       .pilar-play-btn svg { width: 16px; height: 16px; }
@@ -4395,7 +4396,7 @@
         <div class="hero-media-stage">
           <img
             class="hero-laptop-mockup"
-            src="image-removebg-opt.png"
+            src="image-removebg-preview.webp"
             alt=""
             aria-hidden="true"
           >
@@ -4409,7 +4410,7 @@
             tabindex="-1"
             aria-label="Demonstração do Caixa Livre no celular"
           >
-            <source src="stories-iphone-ai-planilha-alpha.webm" type="video/webm">
+            <source src="stories-iphone-v2.webm" type="video/webm">
           </video>
         </div>
       </div>
@@ -4828,7 +4829,7 @@
               preload="auto"
               aria-label="Demonstração prática do Caixa Livre no celular"
             >
-              <source src="stories-iphone-ai-planilha-alpha.webm" type="video/webm">
+              <source src="stories-iphone-v2.webm" type="video/webm">
             </video>
           </div>
           <div class="visual-info">
@@ -4874,7 +4875,7 @@
             <span class="pilar-window-dot pilar-window-dot-yellow"></span>
             <span class="pilar-window-dot pilar-window-dot-green"></span>
           </div>
-          <img src="aba saidas.jpeg" alt="Planilha Caixa Livre — aba de saídas com categorização automática de gastos" class="pilar-img">
+          <img src="aba saidas.webp" loading="lazy" alt="Planilha Caixa Livre — aba de saídas com categorização automática de gastos" class="pilar-img">
         </div>
       </div>
 
@@ -4888,7 +4889,7 @@
         </div>
         <div class="pilar-iphone">
           <div class="pilar-iphone-screen">
-            <img src="analise clara.jpeg" alt="Clara — Assistente IA do Caixa Livre analisando seus números">
+            <img src="analise clara.webp" loading="lazy" alt="Clara — Assistente IA do Caixa Livre analisando seus números">
           </div>
         </div>
       </div>
@@ -4906,7 +4907,7 @@
             <span class="pilar-window-dot pilar-window-dot-yellow"></span>
             <span class="pilar-window-dot pilar-window-dot-green"></span>
           </div>
-          <img src="analise-mes.png" alt="Análise mensal do Caixa Livre para acompanhamento semanal dos números" class="pilar-img">
+          <img src="analise-mes.webp" loading="lazy" alt="Análise mensal do Caixa Livre para acompanhamento semanal dos números" class="pilar-img">
         </div>
       </div>
     </div>
@@ -4943,7 +4944,7 @@
         <!-- Imagem de perfil -->
         <div class="pessoal-media-card scroll-reveal">
           <img
-            src="leticia-profile-opt.jpg" loading="lazy"
+            src="leticia-profile.webp" loading="lazy"
             alt="Letícia Kratka, consultora financeira e criadora do Caixa Livre 2.0"
             class="pessoal-foto"
           >
@@ -5122,7 +5123,7 @@
             <p class="depoimento-contexto">guardado em poucos meses</p>
           </div>
           <div class="depoimento-print">
-            <img src="Depoimentos/jhenifer.jpg" alt="Depoimento da Jhenifer sobre o Caixa Livre">
+            <img src="Depoimentos/jhenifer.webp" loading="lazy" alt="Depoimento da Jhenifer sobre o Caixa Livre">
           </div>
           <div class="depoimento-destaque">
             <p><strong>"A planilha me ajudou bastante nessa visibilidade."</strong> Saiu de 1k guardado pra 21k, conseguindo guardar 30% da renda e segurando a grana até o último dia do mês.</p>
@@ -5137,7 +5138,7 @@
             <p class="depoimento-contexto">economizados no 1º mês</p>
           </div>
           <div class="depoimento-print">
-            <img src="Depoimentos/Andressa.jpg" alt="Depoimento da Andressa sobre o Caixa Livre">
+            <img src="Depoimentos/Andressa.webp" loading="lazy" alt="Depoimento da Andressa sobre o Caixa Livre">
           </div>
           <div class="depoimento-destaque">
             <p><strong>"Sou super resistente com dinheiro. Nunca sobra nada. Ganho e trabalho muito."</strong> Em 1 mês já conseguiu economizar 2 mil e guardou todo o extra que ganhou.</p>
@@ -5148,7 +5149,7 @@
         <!-- Eloisa — sobrou 3 mil, card horizontal full-width -->
         <div class="depoimento-card-full scroll-reveal" style="--reveal-delay: 200ms;">
           <div class="depoimento-print">
-            <img src="Depoimentos/Eloisa 2 - CXL.PNG" alt="Depoimento da Eloisa sobre o Caixa Livre">
+            <img src="Depoimentos/Eloisa 2 - CXL.webp" loading="lazy" alt="Depoimento da Eloisa sobre o Caixa Livre">
           </div>
           <div class="depoimento-card-full-body">
             <p class="depoimento-numero">+R$3.000</p>
@@ -5489,19 +5490,7 @@
       <p class="oferta-abertura">Você não está comprando uma planilha. Você está comprando clareza financeira, sem precisar virar refém de controle chato.</p>
 
       <div class="oferta-composicao scroll-reveal">
-        <!-- Atrás: Mac aba saídas — esquerda -->
-        <div class="oferta-mock-saidas">
-          <div class="pilar-window">
-            <div class="pilar-window-topbar" aria-hidden="true">
-              <span class="pilar-window-dot pilar-window-dot-red"></span>
-              <span class="pilar-window-dot pilar-window-dot-yellow"></span>
-              <span class="pilar-window-dot pilar-window-dot-green"></span>
-            </div>
-            <img src="aba saidas.jpeg" alt="Planilha Caixa Livre — aba de saídas" class="pilar-img">
-          </div>
-        </div>
-
-        <!-- Atrás: Mac análise do mês — direita -->
+        <!-- Atrás esquerda: Análise do Mês -->
         <div class="oferta-mock-analise">
           <div class="pilar-window">
             <div class="pilar-window-topbar" aria-hidden="true">
@@ -5509,16 +5498,23 @@
               <span class="pilar-window-dot pilar-window-dot-yellow"></span>
               <span class="pilar-window-dot pilar-window-dot-green"></span>
             </div>
-            <img src="analise-mes.png" alt="Análise mensal do Caixa Livre" class="pilar-img">
+            <img src="analise-mes.webp" loading="lazy" alt="Análise mensal do Caixa Livre" class="pilar-img">
           </div>
         </div>
 
-        <!-- Centro: Laptop com planilha — o maior -->
-        <div class="oferta-mock-laptop">
-          <img src="image-removebg-preview.png" alt="Laptop com planilha Caixa Livre" aria-hidden="true">
+        <!-- Atrás direita: Aba Saídas -->
+        <div class="oferta-mock-saidas">
+          <div class="pilar-window">
+            <div class="pilar-window-topbar" aria-hidden="true">
+              <span class="pilar-window-dot pilar-window-dot-red"></span>
+              <span class="pilar-window-dot pilar-window-dot-yellow"></span>
+              <span class="pilar-window-dot pilar-window-dot-green"></span>
+            </div>
+            <img src="aba saidas.webp" loading="lazy" alt="Planilha Caixa Livre — aba de saídas" class="pilar-img">
+          </div>
         </div>
 
-        <!-- Esquerdo inferior: Mac plataforma -->
+        <!-- Centro atrás: Plataforma -->
         <div class="oferta-mock-plataforma">
           <div class="pilar-window">
             <div class="pilar-window-topbar" aria-hidden="true">
@@ -5526,11 +5522,16 @@
               <span class="pilar-window-dot pilar-window-dot-yellow"></span>
               <span class="pilar-window-dot pilar-window-dot-green"></span>
             </div>
-            <img src="mockup plataforma.jpeg" alt="Plataforma de aulas do Caixa Livre 2.0" class="pilar-img">
+            <img src="mockup plataforma.webp" loading="lazy" alt="Plataforma de aulas do Caixa Livre 2.0" class="pilar-img">
           </div>
         </div>
 
-        <!-- Centro-esquerda inferior: Mac aula com play -->
+        <!-- Centro: Laptop com planilha — o principal -->
+        <div class="oferta-mock-laptop">
+          <img src="image-removebg-preview.webp" loading="lazy" alt="Laptop com planilha Caixa Livre" aria-hidden="true">
+        </div>
+
+        <!-- Frente esquerda: Aula com play -->
         <div class="oferta-mock-aula">
           <div class="pilar-window pilar-window-video">
             <div class="pilar-window-topbar" aria-hidden="true">
@@ -5538,17 +5539,17 @@
               <span class="pilar-window-dot pilar-window-dot-yellow"></span>
               <span class="pilar-window-dot pilar-window-dot-green"></span>
             </div>
-            <img src="mockupaula.jpeg" alt="Aula do Caixa Livre 2.0" class="pilar-img">
+            <img src="mockupaula.webp" loading="lazy" alt="Aula do Caixa Livre 2.0" class="pilar-img">
             <div class="pilar-play-btn">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
             </div>
           </div>
         </div>
 
-        <!-- Direito inferior: iPhone com vídeo da Clara (maior) -->
+        <!-- Frente direita: iPhone Clara -->
         <div class="oferta-mock-phone">
-          <video autoplay muted loop playsinline preload="auto" tabindex="-1">
-            <source src="stories-iphone-ai-planilha-alpha.webm" type="video/webm">
+          <video autoplay muted loop playsinline preload="none" tabindex="-1">
+            <source src="stories-iphone-v2.webm" type="video/webm">
           </video>
         </div>
       </div>
@@ -5587,7 +5588,7 @@
   <section class="suporte">
     <div class="container-narrow">
       <div class="suporte-shell scroll-reveal">
-        <img src="foto whatsapp.jpeg" alt="Jeane — Suporte Caixa Livre" class="suporte-avatar">
+        <img src="foto whatsapp.webp" loading="lazy" alt="Jeane — Suporte Caixa Livre" class="suporte-avatar">
         <p>Ficou com qualquer dúvida, mesmo que pareça boba? Chama a gente no WhatsApp. <strong>A Jeane vai te ajudar!</strong></p>
 
         <a href="https://wa.me/556199245689?text=Vim%20da%20p%C3%A1gina%20e%20quero%20saber%20mais%20sobre%20o%20Caixa%20Livre" class="btn-whatsapp" target="_blank" rel="noopener">
@@ -6062,7 +6063,7 @@
       <span class="pilar-window-dot pilar-window-dot-yellow"></span>
       <span class="pilar-window-dot pilar-window-dot-green"></span>
     </div>
-    <img src="aulas.jpeg" alt="Área de aulas do Caixa Livre 2.0" class="pilar-img">
+    <img src="aulas.webp" loading="lazy" alt="Área de aulas do Caixa Livre 2.0" class="pilar-img">
   </div>
 
   MOCKUP 2: Janela Mac com capa de aula + botão play
@@ -6072,7 +6073,7 @@
       <span class="pilar-window-dot pilar-window-dot-yellow"></span>
       <span class="pilar-window-dot pilar-window-dot-green"></span>
     </div>
-    <img src="aula-1-opt.jpg" loading="lazy" alt="Aula do Caixa Livre 2.0 — Como preencher a planilha com ajuda da IA" class="pilar-img">
+    <img src="aula-1.webp" loading="lazy" alt="Aula do Caixa Livre 2.0 — Como preencher a planilha com ajuda da IA" class="pilar-img">
     <div class="pilar-play-btn">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
     </div>

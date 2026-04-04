@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Mockups para exportar</title>
+  <style>
+    body {
+      background: #2a2a2a;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 80px;
+      padding: 60px 40px;
+      font-family: sans-serif;
+    }
+    .label {
+      color: #fff;
+      font-size: 14px;
+      margin-bottom: 12px;
+      opacity: 0.5;
+    }
+    .mockup-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Mac Window */
+    .pilar-window {
+      border-radius: 24px;
+      overflow: hidden;
+      background: rgba(255, 255, 255, 0.95);
+      border: 1px solid rgba(200, 200, 200, 0.3);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+      max-width: 700px;
+    }
+    .pilar-window-topbar {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      height: 44px;
+      padding: 0 16px;
+      background: linear-gradient(180deg, #f8f5f0 0%, #efe8e1 100%);
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+    }
+    .pilar-window-dot {
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+    }
+    .dot-red { background: #ff5f57; }
+    .dot-yellow { background: #febc2e; }
+    .dot-green { background: #28c840; }
+    .pilar-window img {
+      width: 100%;
+      display: block;
+    }
+
+    /* Mac Window + Play */
+    .pilar-window-video {
+      position: relative;
+    }
+    .play-btn {
+      position: absolute;
+      top: calc(50% + 22px);
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.92);
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.18), 0 0 0 8px rgba(255, 255, 255, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .play-btn svg {
+      width: 28px;
+      height: 28px;
+      fill: #31422A;
+      margin-left: 3px;
+    }
+
+    /* iPhone */
+    .pilar-iphone {
+      width: 280px;
+      padding: 14px;
+      border-radius: 42px;
+      background: linear-gradient(180deg, #2a2a2a 0%, #1a1a1a 100%);
+      box-shadow: 0 30px 70px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255,255,255,0.08);
+      position: relative;
+    }
+    .pilar-iphone::before {
+      content: '';
+      position: absolute;
+      top: 14px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 28px;
+      background: #1a1a1a;
+      border-radius: 0 0 18px 18px;
+      z-index: 2;
+    }
+    .pilar-iphone-screen {
+      border-radius: 30px;
+      overflow: hidden;
+    }
+    .pilar-iphone-screen img {
+      width: 100%;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 1. Aba Saídas -->
+  <div class="mockup-wrap">
+    <p class="label">1. Aba Saídas (clique direito > Salvar imagem como)</p>
+    <div class="pilar-window">
+      <div class="pilar-window-topbar">
+        <span class="pilar-window-dot dot-red"></span>
+        <span class="pilar-window-dot dot-yellow"></span>
+        <span class="pilar-window-dot dot-green"></span>
+      </div>
+      <img src="aba saidas.jpeg" alt="Aba Saídas">
+    </div>
+  </div>
+
+  <!-- 2. Análise do Mês -->
+  <div class="mockup-wrap">
+    <p class="label">2. Análise do Mês</p>
+    <div class="pilar-window">
+      <div class="pilar-window-topbar">
+        <span class="pilar-window-dot dot-red"></span>
+        <span class="pilar-window-dot dot-yellow"></span>
+        <span class="pilar-window-dot dot-green"></span>
+      </div>
+      <img src="analise-mes.png" alt="Análise do Mês">
+    </div>
+  </div>
+
+  <!-- 3. Mockup Plataforma -->
+  <div class="mockup-wrap">
+    <p class="label">3. Mockup Plataforma</p>
+    <div class="pilar-window">
+      <div class="pilar-window-topbar">
+        <span class="pilar-window-dot dot-red"></span>
+        <span class="pilar-window-dot dot-yellow"></span>
+        <span class="pilar-window-dot dot-green"></span>
+      </div>
+      <img src="mockup plataforma.jpeg" alt="Plataforma">
+    </div>
+  </div>
+
+  <!-- 4. Mockup Aula + Play -->
+  <div class="mockup-wrap">
+    <p class="label">4. Mockup Aula com Play</p>
+    <div class="pilar-window pilar-window-video">
+      <div class="pilar-window-topbar">
+        <span class="pilar-window-dot dot-red"></span>
+        <span class="pilar-window-dot dot-yellow"></span>
+        <span class="pilar-window-dot dot-green"></span>
+      </div>
+      <img src="mockupaula.jpeg" alt="Aula">
+      <div class="play-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5. iPhone Clara (frame do vídeo) -->
+  <div class="mockup-wrap">
+    <p class="label">5. iPhone Clara (frame do vídeo)</p>
+    <div class="pilar-iphone">
+      <div class="pilar-iphone-screen">
+        <img src="clara-frame.png" alt="Clara IA">
+      </div>
+    </div>
+  </div>
+
+  <!-- 5b. iPhone Clara (imagem analise clara - Pilar 2) -->
+  <div class="mockup-wrap">
+    <p class="label">5b. iPhone Analise Clara (Pilar 2)</p>
+    <div class="pilar-iphone">
+      <div class="pilar-iphone-screen">
+        <img src="analise clara.jpeg" alt="Clara — Diagnóstico">
+      </div>
+    </div>
+  </div>
+
+  <!-- 6. Laptop (já tem fundo transparente) -->
+  <div class="mockup-wrap">
+    <p class="label">6. Laptop com planilha (já é PNG com fundo transparente)</p>
+    <img src="image-removebg-preview.png" alt="Laptop" style="max-width: 700px;">
+  </div>
+
+</body>
+</html>
